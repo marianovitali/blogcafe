@@ -155,13 +155,14 @@ img {
 .boton {
     display: block; /* toma todo el espacio disponible*/
     font-family: var(--fuenteHeading);
-    color: blanchedalmond;
+    color: var(--blanco);
     text-align: center;
     padding: 1rem 3rem;
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px){
@@ -169,6 +170,11 @@ img {
         display: inline-block; /*toma el espacio qeu requieres pero si tengo un margin o width se respeta*/
     }
 }
+
+.boton:hover {
+    cursor:pointer;
+}
+
 .boton--primario{
     background-color: var(--negro);
 }
@@ -256,4 +262,39 @@ img {
 .curso__label,
 .curso__info {
     font-size: 2rem;
+}
+
+/**Contacto**/
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -10rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__field {
+ flex: 1;
+ border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
 }
